@@ -2,6 +2,7 @@
 #define CHECK_PRICE
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
-int checkPrice(string location_code);
+vector<int> checkPrice(vector<string> locationArray);
 #endif

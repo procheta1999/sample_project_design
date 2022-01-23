@@ -5,7 +5,7 @@ class MetroRailFrames:public Frames
 {
     public:
     //    MetroRailFrames();
-       MetroRailFrames(string arg_location_code,int arg_price_day,int arg_days);
+       MetroRailFrames(vector<string> arg_location_code,vector<int> arg_price_day,int arg_days);
        void getData();
        void outputBill();
 };     

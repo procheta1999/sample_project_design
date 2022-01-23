@@ -3,8 +3,12 @@
 #include "../include/bus.h"
 #include "../include/checkDays.h"
 #include "../include/checkPrice.h"
+#include "../include/split.h"
 #include <iostream>
 #include <string>
+#include <vector>
+#include <algorithm>
+#include <sstream>  
 using namespace std;
 
 int main()
@@ -21,18 +25,20 @@ int main()
 	cout<<"Duration: ";
 	cin>>days;
 	cout<<endl;
+	vector<string> locationArray; 
+	locationArray= SplitString(location_code);
 	if(checkDays(location,days)==true)
 	{
-		int price=checkPrice(location_code);
+		vector<int> price=checkPrice(locationArray);
 		if(location=="Metro")
 		{
-			MetroRailFrames customer1(location_code,price,days);
+			MetroRailFrames customer1(locationArray,price,days);
 			customer1.outputBill();
 			// customer1.getData();
 		}
 		else
 		{
-			BusFrames customer2(location_code,price,days);
+			BusFrames customer2(locationArray,price,days);
 			customer2.outputBill();
 		}
 	}

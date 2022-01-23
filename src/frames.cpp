@@ -8,7 +8,7 @@ using namespace std;
 //     pricePerDay=1;
 //     days=1;
 // }
-Frames::Frames(string arg_location_code,int arg_price_day,int arg_days)
+Frames::Frames(vector<string> arg_location_code,vector<int> arg_price_day,int arg_days)
 {
     locationCode=arg_location_code;
     pricePerDay=arg_price_day;

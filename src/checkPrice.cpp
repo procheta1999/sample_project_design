@@ -1,27 +1,34 @@
 #include "../include/checkPrice.h"
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
-int checkPrice(string location_code)
+vector<int> checkPrice(vector<string> locationArray)
 {
-    if(location_code=="IM01")
+    vector<int> priceArray;
+    for(int i=0;i<locationArray.size();i++)
     {
-        return 350;
+        if(locationArray[i]=="IM01")
+    {
+        priceArray.push_back(350);
     }
-    else if(location_code=="OM01")
+    else if(locationArray[i]=="OM01")
     {
-        return 950;
+        priceArray.push_back(950);
     }
-    else if(location_code=="AP01") 
+    else if(locationArray[i]=="AP01") 
     {
-        return 600;
+        priceArray.push_back(600);
     }
-    else if(location_code=="SB01")
+    else if(locationArray[i]=="SB01")
     {
-        return 550;
+        priceArray.push_back(550);
     }
     else
     {
-        return 800;
+        priceArray.push_back(800);
     }
+    }
+    return priceArray;
+    
 }
