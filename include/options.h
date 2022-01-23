@@ -1,4 +1,8 @@
 #ifndef OPTIONS_H
 #define OPTIONS_H
-enum LocationChoice;
+enum LocationChoice
+{
+    Metro,
+    Bus
+};
 #endif

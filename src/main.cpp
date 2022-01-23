@@ -3,6 +3,7 @@
 #include "../include/bus.h"
 #include "../include/checkDays.h"
 #include "../include/checkPrice.h"
+#include "../include/options.h"
 #include <iostream>
 #include <string>
 using namespace std;
